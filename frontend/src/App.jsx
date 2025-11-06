@@ -3,10 +3,13 @@ import axios from "axios";
 import VideoPlayer from "./components/VideoPlayer";
 
 function App() {
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [session, setSession] = useState(null);
 
-  const startSession = async () => {
-    const res = await axios.post("http://localhost:5000/api/start-session");
+  const startSession = async () => { 
+    console.log("Starting session...");
+    // const res = await axios.get(`http://localhost:8888`);
+    const res = await axios.post(`${apiUrl}/api/start-session`);
     setSession(res.data.session);
   };
 

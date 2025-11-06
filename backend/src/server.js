@@ -66,11 +66,14 @@ dbConnect();
 
 // Create new session (admin)
 app.get("/", (req, res) => {
-  res.send("Live Tutoring Session Backend is running.");
+  return res.json({
+    message: "Live Tutoring Session Backend is running.",
+  });
 });
 
 app.post("/api/start-session", async (req, res) => {
   try {
+    console.log("Starting new session... backend");
     const unique_id = uuidv4();
     const userurl = `http://localhost:5173/session/${unique_id}`;
 
@@ -81,9 +84,9 @@ app.post("/api/start-session", async (req, res) => {
     });
 
     await newSession.save();
-    res.json({ success: true, session: newSession });
+    return res.json({ success: true, session: newSession });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    return res.status(500).json({ success: false, message: error.message });
   }
 });
 
@@ -98,4 +101,4 @@ app.get("/api/session/:id", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("🚀 Server running on port 5000"));
+app.listen(8888, () => console.log("🚀 Server running on port 8888"));
