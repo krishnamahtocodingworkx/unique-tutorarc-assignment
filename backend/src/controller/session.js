@@ -5,7 +5,7 @@ export const SessionController = {
   createSession: async (req, res) => {
     try {
       const unique_id = uuidv4();
-      const userurl = `https://unique-tutorarc-assignment.vercel.app/session/${unique_id}`;
+      const userurl = `https://unique-tutorarc-assignment.vercel.app/${unique_id}`;
 
       const newSession = new LiveSession({
         type: "admin",
