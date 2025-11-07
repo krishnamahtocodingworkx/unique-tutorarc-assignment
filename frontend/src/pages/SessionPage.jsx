@@ -6,10 +6,11 @@ import VideoPlayer from "../components/VideoPlayer";
 function SessionPage() {
   const { id } = useParams();
   const [session, setSession] = useState(null);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/session/${id}`)
+      .get(`${apiUrl}/api/session/${id}`)
       .then((res) => {
         setSession(res.data.session);
       })

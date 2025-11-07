@@ -40,3 +40,78 @@
 .read-the-docs {
   color: #888;
 }
+
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Inter", Arial, sans-serif;
+  color: #222;
+}
+
+/* Start session button */
+.start-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #0069d9;
+}
+
+/* Session section */
+.session-title {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #111;
+}
+
+.session-desc {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.link-container {
+  margin-bottom: 10px;
+}
+
+.session-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.session-link:hover {
+  text-decoration: underline;
+}
+
+/* Copy button */
+.copy-btn {
+  padding: 8px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #5a6268;
+}
+
+.copy-btn.copied {
+  background: green;
+}
+
+/* Video section */
+.video-section {
+  margin-top: 30px;
+}

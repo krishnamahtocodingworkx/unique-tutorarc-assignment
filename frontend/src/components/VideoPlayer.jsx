@@ -13,10 +13,9 @@ const VideoPlayer = () => {
         style={{ borderRadius: "10px" }}
       >
         <source
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          src="https://www.pexels.com/download/video/2887463/"
           type="video/mp4"
         />
-        Your browser does not support the video tag.
       </video>
     </div>
   );
